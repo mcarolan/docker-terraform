@@ -1,11 +1,15 @@
 
 version: 0.1
+env:
+  parameter-store:
+    AccessKey: "CB-AccessKey"
+    SecretKey: "CB-SecretKey"
 phases:
   build:
     commands:
       - echo Build started on `date`
       - terraform init environment
-      - terraform plan environment
+      - terraform -var-access_key=$CB-AccessKey -var-secret_key=$CB_SecretKey plan environment
   post_build:
     commands:
       - echo Build completed on `date`
