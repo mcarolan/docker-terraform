@@ -6,7 +6,7 @@ provider "aws" {
 
 resource "aws_s3_bucket" "hello_world_terraform_codebuild" {
 
-    bucket = "hello_world_terraform_codebuild"
+    bucket = "hello-world-terraform-codebuild"
     acl = "private"
 
 }
