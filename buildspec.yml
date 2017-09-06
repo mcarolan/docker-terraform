@@ -9,7 +9,7 @@ phases:
     commands:
       - echo Build started on `date`
       - terraform init environment
-      - terraform -var "access_key=$CB-AccessKey" -var "secret_key=$CB_SecretKey" plan environment
+      - terraform plan -var "access_key=$AccessKey" -var "secret_key=$SecretKey" environment
   post_build:
     commands:
       - echo Build completed on `date`
